@@ -1,0 +1,18 @@
+[build-system]
+requires = ["maturin>=0.13"]
+build-backend = "maturin"
+
+[project]
+name = "libvanitas"
+version = "0.1.0"
+description = "Python wrapper for the whitespace library"
+authors = [
+    {name = "Ect07", email = "ect@vivaldi.net"},
+]
+license = "MIT"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/rHanbowChic/libvanitas"
+Repository = "https://github.com/rHanbowChic/libvanitas.git"
+Issues = "https://github.com/rHanbowChic/libvanitas/issues"

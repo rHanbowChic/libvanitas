@@ -1,0 +1,22 @@
+[package]
+name = "libvanitas"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "libvanitas"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+#
+# Downstream Rust code (including code in `bin/`, `examples/`, and `tests/`) will not be able
+# to `use libvanitas;` unless the "rlib" or "lib" crate type is also included, e.g.:
+# crate-type = ["cdylib", "rlib"]
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "*"
+features = ["extension-module"]
+
+[dependencies]
+pyo3-asyncio = { version = "*", features = ["tokio", "tokio-runtime", "attributes"] }
+
+whitespace = { path = "../whitespace" }
